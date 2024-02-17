@@ -1,13 +1,18 @@
 <template>
-  <v-app-bar flat>
+  <v-app-bar color="primary" flat>
     <v-app-bar-title>
-      <v-icon icon="mdi-circle-slice-4" />
-
-      Base Preset
+      <v-btn v-if="back" color="bg-primary" flat @click=" $router.push({name:'Home'}) ">Back</v-btn>
+      <span v-else>Order app</span>
     </v-app-bar-title>
   </v-app-bar>
 </template>
 
-<script setup>
-  //
+<script>
+  export default{
+    computed:{
+      back(){
+        return this.$route.name === 'Order'
+      },
+    },
+  }
 </script>
