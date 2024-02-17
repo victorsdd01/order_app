@@ -5,7 +5,7 @@
             <v-row class="my-3 mx-3" no-gutters>
                 <span class="text-h5 font-weight-bold"> Number of order: {{ '#'+order.number }}</span>
                 <v-spacer></v-spacer>
-                <v-btn class="mx-3 bg-light-blue" :loading="isLoading" @click="pay">Pay</v-btn>
+                <v-btn class="mx-3 bg-light-blue" @click="pay">Pay</v-btn>
                 <v-btn class="bg-primary" @click="addNewProduct">Add new product</v-btn>
             </v-row>
             <v-table class="mx-3">
